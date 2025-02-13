@@ -42,8 +42,8 @@ def draw_heart(frame, center, size, color):
 
 def main():
     # Streamlit UI
-    st.title("💝 Valentine's Day Gesture Recognition")
-    st.write("Make a heart shape with your hands to see the magic! ✨")
+    st.title("💝 Valentine's Day")
+    st.write("Make a heart shape with your hands.✨")
 
     # Initialize session state for particles
     if 'floating_hearts' not in st.session_state:
@@ -59,7 +59,7 @@ def main():
     video_placeholder = st.empty()
     
     # Start webcam
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(1)
     
     while True:
         ret, frame = cap.read()
